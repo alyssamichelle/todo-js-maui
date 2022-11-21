@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Todo</title>
+    </head>
+    <body>
+        <div id="app">Loading...</div>
+        <script src="_framework/blazor.webassembly.js" autostart="false"></script>
+        
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function () {
+                alert(typeof Blazor);
+                alert(typeof DotNet);
+            });
+            DotNet.invokeMethodAsync('TodoWrapper', 'GetDeviceInfo').then((something) => {
+                alert(something);
+            });
+
+        </script>
+    </body>
+</html>
